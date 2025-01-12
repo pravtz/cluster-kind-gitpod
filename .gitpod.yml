@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Start kind cluster
+    init: ./start-kind.sh
+ports:
+  - port: 80
+    onOpen: open-preview
+  - port: 443
+    onOpen: open-preview
